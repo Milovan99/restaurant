@@ -17,13 +17,19 @@ export const Navbar = () => {
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <NavLink to="/restaurant/about">About</NavLink>
+          <NavLink to="/restaurant/about" onClick={() => setMenuOpen(false)}>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/restaurant/service">Service</NavLink>
+          <NavLink to="/restaurant/service" onClick={() => setMenuOpen(false)}>
+            Service
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/restaurant/contact">Contact</NavLink>
+          <NavLink to="/restaurant/contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
