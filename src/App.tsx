@@ -1,9 +1,20 @@
+import { Route, Routes } from "react-router-dom";
+import { Navbar } from "./components/navbar/Navbar";
+import { About } from "./components/pages/About";
+import { Service } from "./components/pages/Service";
+import { Home } from "./components/pages/Home";
+import { Contact } from "./components/pages/Contact";
+
 function App() {
   return (
-    <div>
-      <h1>Restaurant</h1>
-      <p>COO,CFO,CIO,CMO,CCO and KAM : Ivan Manojlovic</p>
-      <p>CTO : Milovan Jakovljevic</p>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/restaurant" element={<Home />} />
+        <Route path="/restaurant/about" element={<About />} />
+        <Route path="/restaurant/service" element={<Service />} />
+        <Route path="/restaurant/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
