@@ -1,15 +1,20 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   return (
     <nav>
-      <Link to="/restaurant" className="title">
+      <NavLink to="/restaurant" end className="title">
         Restaurant
-      </Link>
+      </NavLink>
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
@@ -17,19 +22,13 @@ export const Navbar = () => {
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <NavLink to="/restaurant/about" onClick={() => setMenuOpen(false)}>
-            About
-          </NavLink>
+          <NavLink to="/restaurant/about">About</NavLink>
         </li>
         <li>
-          <NavLink to="/restaurant/service" onClick={() => setMenuOpen(false)}>
-            Service
-          </NavLink>
+          <NavLink to="/restaurant/service">Service</NavLink>
         </li>
         <li>
-          <NavLink to="/restaurant/contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </NavLink>
+          <NavLink to="/restaurant/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>
