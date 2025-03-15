@@ -62,7 +62,6 @@
   
   nav ul li a.active {
     background-color: var(--active-bg);
-    font-weight: 600;
   }
   
   nav ul li a.active:hover {
