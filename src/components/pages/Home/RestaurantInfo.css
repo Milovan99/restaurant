@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Work+Sans:wght@300&display=swap');
+
+body {
+    line-height: 1.6;
+  }
+
+.first {
+    background: #F9F1DF;
+    grid-area: first;
+  }
+
+.first p{
+  margin: 16px;
+}
+
+
+h1 {
+    font-family: 'Prata', serif;
+    text-align: center;
+}
+
+.first h1{
+  margin: 16px;
+  font-size: 2rem;
+}
+
+.aside h1{
+  margin-top: 60px;
+  color: white;
+}
+
+.aside p{
+  margin-top: 30px;
+  color: white;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    color: #666666;
+}
+
+.ornament-img{
+  margin-top: 40px;
+  padding: 10px 30px;
+  height: 60px;
+  width: 100%;
+  object-fit:scale-down;
+}
+  
+.main {
+    background: #fff;
+    grid-area: main;
+  }
+  
+.aside {
+    background: #EB0029;
+    grid-area: aside;
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first"
+      "main"
+      "aside";
+  }
+
+@media (min-width: 850px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "first first"
+        "main aside";
+    }
+  }
+  
+@media (min-width: 1300px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "first main aside";
+  }
+}
