@@ -1,11 +1,13 @@
 import React from "react";
 import "./RestaurantInfo.css";
 import chef from "../../../assets/chef.jpg";
+import ornament from "../../../assets/ornament.png";
 
 export const RestaurantInfo = () => {
   return (
     <div className="grid-container">
       <div className="first">
+        <img className="ornament-img" src={ornament}></img>
         <h1>Welcome To Our Luxury Restaurant</h1>
         <p>
           The first restaurant proprietor is believed to have been one A.
@@ -20,8 +22,14 @@ export const RestaurantInfo = () => {
       </div>
 
       <div className="aside">
-        <h1>The City</h1>
-        <p>Chania is the capital of the Chania region...</p>
+        <h1>Opening Hours</h1>
+        <p>Saturday : 6.00 am - 12.00 pm</p>
+        <p>Sunday : 6.00 am - 12.00 pm</p>
+        <p>Monday : 6.00 am - 12.00 pm</p>
+        <p>Tuesday : 6.00 am - 12.00 pm</p>
+        <p>Wednesday : 6.00 am - 12.00 pm</p>
+        <p>Thursday : 6.00 am - 12.00 pm</p>
+        <p>Friday : 6.00 am - 12.00 pm</p>
       </div>
     </div>
   );
