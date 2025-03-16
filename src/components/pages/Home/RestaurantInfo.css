@@ -5,21 +5,48 @@ body {
   }
 
 .first {
+  display: flex;
+  flex-direction: column;
     background: #F9F1DF;
     grid-area: first;
+    align-items: center;
   }
 
 .first p{
   margin: 16px;
 }
 
+  
+.aside {   
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #EB0029;
+  position:relative;
+  grid-area: aside;
+  padding: 0rem 4rem;
+}
+
+
+.schedule-item {  
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 1rem 0rem;
+  font-weight: 800;
+  font-size: 17px;
+  color: white;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+} 
 
 h1 {
     font-family: 'Prata', serif;
-    text-align: center;
 }
 
 .first h1{
+  text-align: center;
   margin: 16px;
   font-size: 2rem;
 }
@@ -47,15 +74,47 @@ p {
   width: 100%;
   object-fit:scale-down;
 }
+
+.phone-img{
+  padding: 20px;
+  height: 80px;
+  background: #EB0029;
+  object-fit: contain;
+}
+
+.contact{
+  margin: 30px 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: row ; 
+  background-color: white;
+}
+
+.contact p{
+  font-weight: bold;
+  font-family:Verdana,  sans-serif;
+}
   
 .main {
     background: #fff;
     grid-area: main;
   }
   
-.aside {
-    background: #EB0029;
-    grid-area: aside;
+  .aside::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/assets/fast-food-pattern.png);
+    opacity: 0.1;
+  }
+  
+  .aside h1,
+  .aside p {
+    position: relative;
+    z-index: 1;
   }
   
 .grid-container {

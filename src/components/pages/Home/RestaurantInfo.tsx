@@ -2,6 +2,7 @@ import React from "react";
 import "./RestaurantInfo.css";
 import chef from "../../../assets/chef.jpg";
 import ornament from "../../../assets/ornament.png";
+import phone from "../../../assets/phone.png";
 
 export const RestaurantInfo = () => {
   return (
@@ -15,6 +16,11 @@ export const RestaurantInfo = () => {
           The sign above his door advertised restoratives, or restaurants,
           referring to the soups and broths available within.
         </p>
+
+        <div className="contact">
+          <img src={phone} className="phone-img" />
+          <p>+000 000 000</p>
+        </div>
       </div>
 
       <div className="main">
@@ -23,13 +29,34 @@ export const RestaurantInfo = () => {
 
       <div className="aside">
         <h1>Opening Hours</h1>
-        <p>Saturday : 6.00 am - 12.00 pm</p>
-        <p>Sunday : 6.00 am - 12.00 pm</p>
-        <p>Monday : 6.00 am - 12.00 pm</p>
-        <p>Tuesday : 6.00 am - 12.00 pm</p>
-        <p>Wednesday : 6.00 am - 12.00 pm</p>
-        <p>Thursday : 6.00 am - 12.00 pm</p>
-        <p>Friday : 6.00 am - 12.00 pm</p>
+        <div className="schedule-item">
+          <span>SATURDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
+        <div className="schedule-item">
+          <span>SUNDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
+        <div className="schedule-item">
+          <span>MONDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
+        <div className="schedule-item">
+          <span>TYESDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
+        <div className="schedule-item">
+          <span>WEDNESDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
+        <div className="schedule-item">
+          <span>THURSDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
+        <div className="schedule-item">
+          <span>FRIDAY:</span>
+          <span>6.00 am - 12.00 pm</span>
+        </div>
       </div>
     </div>
   );
